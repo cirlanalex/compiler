@@ -1,0 +1,19 @@
+Arrays are declared as arrays in C: int/double name[SIZE]
+Whenever a procedure/function accepts an array / var array as parameter it is always written as "RETURN_TYPE *name"
+Whenever a procedure/function accepts a value as parameter it is always written as "RETURN_TYPE variable"
+Whenever a procedure/function accepts a var as parameter it is always written as "RETURN_TYPE *variable"
+When arrays are passed by reference it passes the pointer to the array
+When arrays are passed by value it passes the copy of the array(copy is made before the call)
+    - The copy is allocated memory by using "alloca(SIZE)"
+    - The elements of the array are copied using "memcpy(NEW_ARRAY_POINTER, OLD_ARRAY_POINTER, SIZE)"
+When a value from an array is passed by value it passes a copy of the element(copy is made before the call)
+When a value from an array is passed by reference it sends the pointer of that element
+When a slice of an array is passed by reference it passes the pointer from the start of the slice of the array
+    - Example: if we have VAR a : ARRAY [0 .. 5], and we send a[2..3], then we send the pointer to a[2]
+When a slice of an array is passed by value it passes a copy of the sliced array(copy is made before the call)
+    - If we take the example from before, we get the pointer to a[2]
+    - After, we allocate memory of the size of the slice (3-2+1) using "alloca(SIZE)"
+    - Then, the elements of the array are copied using "memcpy(NEW_ARRAY_POINTER, POINTER_OF_A[2], SIZE)"
+
+When parameters are used in equations, it always make a copy of them using _tX, and use that to do calculations.
+Every calculation is made in quadruple system, including accessing elements from arrays.

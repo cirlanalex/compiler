@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.fl": "c",
+        "*.lex": "c",
+        "*.g": "c",
+        "*.y": "c",
+        "format": "c",
+        "initializer_list": "c",
+        "type_traits": "c",
+        "xstring": "c",
+        "xutility": "c"
+    }
+}
